@@ -101,6 +101,10 @@ namespace ConsoleApp1
             listOfHeroes.Add(axe);
             listOfHeroes.Add(dazzle);
             Heroes(listOfHeroes);
+
+            var breakfast = new breakfast();
+            breakfast.MakeABreakfastAsync();
+            Console.Read();
         }
     }
 }
