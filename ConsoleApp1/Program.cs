@@ -24,9 +24,23 @@ namespace ConsoleApp1
                 }
             }
         }
+
+        static void Heroes(List<hero> listOfHeroes)
+        {
+            foreach (var hero in listOfHeroes)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Name - " + hero.Name);
+                Console.WriteLine("Class - " + hero.Class);
+                Console.WriteLine("Health - " + hero.Health);
+                Console.WriteLine("Mana - " + hero.Mana);
+            }
+        }
         static void Main(string[] args)
         {
             List<people> listOfPeople = new List<people>();
+            List<hero> listOfHeroes = new List<hero>();
+
             var konstantin = new people();
             konstantin.SetAge(23);
             konstantin.SetFI("Gamayunov Konstantin");
@@ -57,6 +71,40 @@ namespace ConsoleApp1
             Blabla(listOfPeople);
             var konstantin2 = new weaver();
             konstantin2.FirstSkill();
+
+            var clinkz = new hero();
+            clinkz.Name = "Clinkz";
+            clinkz.Health = 550;
+            clinkz.Mana = 300;
+            clinkz.Class = "Carry";
+
+            var leoric = new hero();
+            leoric.Name = "Skeleton King";
+            leoric.Class = "Carry";
+            leoric.Health = 650;
+            leoric.Mana = 200;
+
+            var dazzle = new hero();
+            dazzle.Name = "Dazzle";
+            dazzle.Class = "Support";
+            dazzle.Health = 500;
+            dazzle.Mana = 500;
+
+            var axe = new hero();
+            axe.Name = "Axe";
+            axe.Class = "Tank";
+            axe.Health = 700;
+            axe.Mana = 250;
+
+            listOfHeroes.Add(clinkz);
+            listOfHeroes.Add(leoric);
+            listOfHeroes.Add(axe);
+            listOfHeroes.Add(dazzle);
+            Heroes(listOfHeroes);
+
+            var breakfast = new breakfast();
+            breakfast.MakeABreakfastAsync();
+            Console.Read();
         }
     }
 }
