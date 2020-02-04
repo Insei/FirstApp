@@ -104,6 +104,9 @@ namespace ConsoleApp1
 
             var breakfast = new breakfast();
             breakfast.MakeABreakfastAsync();
+
+            var lunch = new Lunch();
+            lunch.MakeLunchAsync();
             Console.Read();
         }
     }
